@@ -14,6 +14,14 @@ namespace Notes.Views
             InitializeComponent();
         }
 
+       
+
+        async void OnAddClicked(object sender, EventArgs e)
+        {
+            // Navigate to the NoteEntryPage, without passing any data.
+            await Shell.Current.GoToAsync(nameof(NoteEntryPage));
+        }
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
