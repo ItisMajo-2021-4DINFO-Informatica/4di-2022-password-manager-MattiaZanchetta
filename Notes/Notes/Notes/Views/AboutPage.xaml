@@ -5,7 +5,7 @@
              Title="About">
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
-        <Image Source="xamarin_logo.png"
+        <Image Source="images.png"
                BackgroundColor="{StaticResource AppPrimaryColor}"
                Opacity="0.85"
                VerticalOptions="Center"
@@ -18,7 +18,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
-                            <Span Text="Notes"
+                            <Span Text="Applicazione Gestione Password"
                                   FontAttributes="Bold"
                                   FontSize="22" />
                             <Span Text=" v1.0" />
@@ -26,8 +26,8 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
-            <Button Text="Learn more"
+            <Label Text="Quest'applicazione è stata fatta da Mattia Zanchetta, della classe 4DI, utilizzando il linguaggio Xamarin e C#" />
+            <Button Text="About me"
                     Clicked="OnButtonClicked" />
         </StackLayout>
     </Grid>

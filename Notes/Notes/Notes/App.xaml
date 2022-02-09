@@ -10,7 +10,7 @@
 
         <!-- Colors -->
         <Color x:Key="AppPrimaryColor">#003049</Color>
-        <Color x:Key="AppBackgroundColor">AliceBlue</Color>
+        <Color x:Key="AppBackgroundColor">#2E566B</Color>
         <Color x:Key="PrimaryColor">Black</Color>
         <Color x:Key="SecondaryColor">White</Color>
         <Color x:Key="TertiaryColor">Silver</Color>
