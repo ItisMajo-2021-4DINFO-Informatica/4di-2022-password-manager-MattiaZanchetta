@@ -25,9 +25,6 @@
                 HeightRequest="50" 
                 Focused="OnFocus"
                 Unfocused="OnLostFocus"/>
-        <Button x:Name="btnHide"
-                Text="Hide password"
-                Clicked="OnHideButtonClicked"/>
         <Editor Placeholder="URL"
                 Text="{Binding URL}"
                 HeightRequest="50" />
