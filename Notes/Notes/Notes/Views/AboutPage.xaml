@@ -6,7 +6,7 @@
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <Image Source="images.png"
-               BackgroundColor="{StaticResource AppPrimaryColor}"
+               BackgroundColor="{StaticResource AppBackgroundColor}"
                Opacity="0.85"
                VerticalOptions="Center"
                HeightRequest="64" />

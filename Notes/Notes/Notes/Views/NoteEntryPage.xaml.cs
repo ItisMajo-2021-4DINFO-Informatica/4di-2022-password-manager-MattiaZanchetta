@@ -8,6 +8,8 @@ namespace Notes.Views
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public partial class NoteEntryPage : ContentPage
     {
+        int tapCounter;
+        string passwordOriginale;
         public string ItemId
         {
             set
@@ -19,6 +21,7 @@ namespace Notes.Views
         public NoteEntryPage()
         {
             InitializeComponent();
+            tapCounter = 0;
 
             // Set the BindingContext of the page to a new Note.
             BindingContext = new Note();
@@ -32,6 +35,7 @@ namespace Notes.Views
                 // Retrieve the note and set it as the BindingContext of the page.
                 Note note = await App.Database.GetNoteAsync(id);
                 BindingContext = note;
+                passwordOriginale = passwordSection.Text;
             }
             catch (Exception)
             {
@@ -56,9 +60,32 @@ namespace Notes.Views
         {
             var note = (Note)BindingContext;
             await App.Database.DeleteNoteAsync(note);
-
+            
             // Navigate backwards
             await Shell.Current.GoToAsync("..");
+        }
+
+        async void OnHideButtonClicked(object sender, EventArgs e)
+        {
+            tapCounter++;
+
+            if (tapCounter % 2 != 0)
+            {
+                passwordSection.Text = "***********";
+            }
+            if (tapCounter % 2 == 0)
+            {
+                passwordSection.Text = passwordOriginale;
+            }
+        }
+
+        async void OnLostFocus(object sender, EventArgs e)
+        {
+            passwordSection.Text = "***********";
+        }
+        async void OnFocus(object sender, EventArgs e)
+        {
+            passwordSection.Text = passwordOriginale;
         }
     }
 }
