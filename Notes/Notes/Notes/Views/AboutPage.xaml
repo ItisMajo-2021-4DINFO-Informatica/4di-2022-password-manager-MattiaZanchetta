@@ -26,7 +26,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Text="Quest'applicazione è stata fatta da Mattia Zanchetta, della classe 4DI, utilizzando il linguaggio Xamarin e C#" />
+            <Label Text="Quest'applicazione è stata fatta da Mattia Zanchetta, studente della classe 4DI, utilizzando il linguaggio Xamarin e C#. BTW se quest'app l'hai pagata, credo tu sia stato fregato UwU" />
             <Button Text="About me"
                     Clicked="OnButtonClicked" />
         </StackLayout>
